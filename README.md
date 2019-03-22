@@ -42,8 +42,7 @@ https://code.visualstudio.com/
   database dan table lalu import file .csv dari folder `database/simpegdb/akun.csv` dan `database/simpegdb/pegawai.csv`
 - Struktur data :
 
-`
-  TABLE akun
+TABLE akun
 
     id_akun bigint NOT NULL,
     username character varying(50) COLLATE pg_catalog."default",
@@ -52,8 +51,7 @@ https://code.visualstudio.com/
     email character varying(50) COLLATE pg_catalog."default",
     CONSTRAINT akun_pkey PRIMARY KEY (id_akun)
 
-
-  TABLE pegawai
+TABLE pegawai
 
     id_pegawai bigint NOT NULL,
     alamat character varying(255) COLLATE pg_catalog."default",
@@ -67,13 +65,10 @@ https://code.visualstudio.com/
     telpon character varying(255) COLLATE pg_catalog."default",
     usia integer,
     CONSTRAINT pegawai_pkey PRIMARY KEY (id_pegawai)
-`
 
 - Script sql :
 
-`
-
-CREATE DATABASE simpegdb
+`CREATE DATABASE simpegdb
     WITH 
     OWNER = postgres
     ENCODING = 'UTF8'
@@ -81,7 +76,6 @@ CREATE DATABASE simpegdb
     LC_CTYPE = 'C'
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
-
 
 CREATE TABLE public.akun
 (
@@ -100,11 +94,9 @@ TABLESPACE pg_default;
 ALTER TABLE public.akun
     OWNER to postgres;
 
-
 INSERT INTO public.akun(
 	id_akun, username, password, nama, email)
 	VALUES (1, 'admin', 'admin', 'admin portal', 'admin@gmail.com');
-
 
 CREATE TABLE public.pegawai
 (
@@ -127,9 +119,7 @@ WITH (
 TABLESPACE pg_default;
 
 ALTER TABLE public.pegawai
-    OWNER to postgres;
-
-`
+    OWNER to postgres;`
 
 ### Backend
 
