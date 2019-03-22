@@ -68,7 +68,7 @@ TABLE pegawai
 
 - Script sql :
 
-`CREATE DATABASE simpegdb
+>CREATE DATABASE simpegdb
     WITH 
     OWNER = postgres
     ENCODING = 'UTF8'
@@ -119,7 +119,7 @@ WITH (
 TABLESPACE pg_default;
 
 ALTER TABLE public.pegawai
-    OWNER to postgres;`
+    OWNER to postgres;
 
 ### Backend
 
