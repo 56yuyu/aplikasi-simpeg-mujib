@@ -8,9 +8,7 @@
 
 
 >Angular js v7.2.10
-
 >Spring boot v2.0.3
-
 >Postgresql v9.6.12
 
 
@@ -77,7 +75,7 @@ TABLE pegawai
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
 
-CREATE TABLE public.akun
+>CREATE TABLE public.akun
 (
     id_akun bigint NOT NULL,
     username character varying(50) COLLATE pg_catalog."default",
@@ -86,19 +84,19 @@ CREATE TABLE public.akun
     email character varying(50) COLLATE pg_catalog."default",
     CONSTRAINT akun_pkey PRIMARY KEY (id_akun)
 )
-WITH (
+>WITH (
     OIDS = FALSE
 )
-TABLESPACE pg_default;
+>TABLESPACE pg_default;
 
-ALTER TABLE public.akun
+>ALTER TABLE public.akun
     OWNER to postgres;
 
-INSERT INTO public.akun(
+>INSERT INTO public.akun(
 	id_akun, username, password, nama, email)
 	VALUES (1, 'admin', 'admin', 'admin portal', 'admin@gmail.com');
 
-CREATE TABLE public.pegawai
+>CREATE TABLE public.pegawai
 (
     id_pegawai bigint NOT NULL,
     alamat character varying(255) COLLATE pg_catalog."default",
@@ -113,12 +111,12 @@ CREATE TABLE public.pegawai
     usia integer,
     CONSTRAINT pegawai_pkey PRIMARY KEY (id_pegawai)
 )
-WITH (
+>WITH (
     OIDS = FALSE
 )
-TABLESPACE pg_default;
+>TABLESPACE pg_default;
 
-ALTER TABLE public.pegawai
+>ALTER TABLE public.pegawai
     OWNER to postgres;
 
 ### Backend
